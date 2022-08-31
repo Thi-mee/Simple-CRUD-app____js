@@ -17,7 +17,6 @@ app.get('/', function(req, res) {
 app.get('/:id', (req, res) => {
 
     let id = req.params.id;
-    id = id.substring(1);
     data.forEach(item => {
         if(item.id == parseInt(id)){
             res.status(200).json(item)
@@ -40,7 +39,6 @@ app.post('/', (req, res) => {
 app.put('/:id', (req, res) => {
 
     let id = req.params.id
-    id = id.substring(1);
     let status = req.body.status
     //update course enrollment status
     data.forEach(item => {
@@ -60,7 +58,6 @@ app.put('/:id', (req, res) => {
 app.delete('/:id', (req, res) => {
 
     let id = req.params.id;
-    id = id.substring(1)
     data.forEach(item => {
         if(item.id == id){
             let index = data.indexOf(item)

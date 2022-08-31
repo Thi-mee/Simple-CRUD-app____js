@@ -54,19 +54,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/:1",
+					"raw": "localhost:8080/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						":1"
-					],
-					"variable": [
-						{
-							"key": "1",
-							"value": null
-						}
+						"1"
 					]
 				}
 			},
@@ -78,19 +72,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/:1",
+					"raw": "localhost:8080/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						":1"
-					],
-					"variable": [
-						{
-							"key": "1",
-							"value": null
-						}
+						"1"
 					]
 				}
 			},
@@ -111,19 +99,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/:1",
+					"raw": "localhost:8080/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						":1"
-					],
-					"variable": [
-						{
-							"key": "1",
-							"value": null
-						}
+						"1"
 					]
 				}
 			},
