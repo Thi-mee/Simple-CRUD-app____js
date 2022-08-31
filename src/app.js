@@ -9,23 +9,24 @@ app.use(express.json());
 
 
 
-// GET for 'C' in CRUD
+// READ for 'R' in CRUD
 app.get('/', function(req, res) {
 
     res.status(200).json(data)
 });
-app.get('/:id', function(req, res) {
+app.get('/:id', (req, res) => {
 
     let id = req.params.id;
+    id = id.substring(1);
     data.forEach(item => {
-        if(item(id) == id){
+        if(item.id == parseInt(id)){
             res.status(200).json(item)
         }
     });
 });
 
 
-//Receive for 'R' in CRUD
+//Create for 'C' in CRUD
 app.post('/', (req, res) => {
 
     let newCourse = req.body;
@@ -39,11 +40,12 @@ app.post('/', (req, res) => {
 app.put('/:id', (req, res) => {
 
     let id = req.params.id
+    id = id.substring(1);
     let status = req.body.status
     //update course enrollment status
     data.forEach(item => {
-        if(item(id) == id){
-            let index = database.indexOf(item)
+        if(item.id == id){
+            let index = data.indexOf(item)
             item.status = status;
             res.json({
                 item,
@@ -58,10 +60,11 @@ app.put('/:id', (req, res) => {
 app.delete('/:id', (req, res) => {
 
     let id = req.params.id;
+    id = id.substring(1)
     data.forEach(item => {
         if(item.id == id){
             let index = data.indexOf(item)
-            database.splice(index, 1)
+            data.splice(index, 1)
             res.status(200).json(`Item with id ${index + 1} deleted successfully`)
         }
     })

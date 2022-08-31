@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b288f809-31c9-43ae-a64a-784f0179cff5",
+		"name": "backendProj2Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23041380"
+	},
+	"item": [
+		{
+			"name": "Post request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"status\": \"active\",\r\n        \"header_image\": \"https://images.unsplash.com/photo-1581093805071-a04e696db334?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=50\",\r\n        \"title\": \"This is my added Json\",\r\n        \"description\": \"This is so much stress\",\r\n        \"syllabus_link\": \"https://paystack.com\",\r\n        \"prerequisites\": [\r\n            \"You should have a basic understanding of Javascript\",\r\n            \"Prepare your learning materials (laptops, good internet connection)\",\r\n            \"You should not like girls\"\r\n        ],\r\n        \"outcomes\": [\r\n            \"Understand NodeJS & the V8 Engine\",\r\n            \"Learn the Global Variables in NodeJS\",\r\n            \"Learn Core NodeJS Modules\"\r\n        ],\r\n        \"duration\": \"5 weeks\",\r\n        \"video\": \"https://res.cloudinary.com/hayche-network/video/upload/v1646928444/website/videos/19_kbugbr.mp4\",\r\n        \"intro_video_cover\": \"https://res.cloudinary.com/hayche-network/image/upload/v1646928478/website/videos/19_bnu7mc.jpg\",\r\n        \"payment_link\": \"https://paystack.com/pay/aywznkh13p\",\r\n        \"instructor\": {\r\n            \"name\": \"Timi Adenuga\",\r\n            \"about\": \"Timi is a student, as well as a Software Engineer, and has over 12 years of software engineering experience. He is an engineering mentor and technical leader who is passionate about creating solutions using modern architectural patterns in a variety of industries.\",\r\n            \"image\": \"https://solomonmarvel.com/img/avatar.0d9b2d8f.png\",\r\n            \"url\": \"\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/:1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						":1"
+					],
+					"variable": [
+						{
+							"key": "1",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/:1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						":1"
+					],
+					"variable": [
+						{
+							"key": "1",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change status of Item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\" : \"inactive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/:1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						":1"
+					],
+					"variable": [
+						{
+							"key": "1",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
