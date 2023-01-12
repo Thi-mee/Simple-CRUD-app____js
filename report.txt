@@ -1,0 +1,10 @@
+Nice job.
+Ensure you maintain proper folder structures always.
+
+Add proper comments to your js code. This would server as proper documentation to other developers.
+
+Nice work with the error handling.
+
+Do not send a response inside a loop. Try as much as you can to avoid it.
+
+I would love to see data validation in the next task.
